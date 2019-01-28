@@ -12,7 +12,7 @@ You can try it out to learn and understand more about Connexion frameowrk.
 
 You need the following to run this project
 
-- Connexion framework :  to write OPenAPI specification and generate swagger documentation
+- Connexion[https://connexion.readthedocs.io/en/latest/] :  to write OPenAPI specification and generate swagger documentation
 - Curl:  to request and retrieve data from hard disk
 - sqlite3: to create a datastore for our library
 
