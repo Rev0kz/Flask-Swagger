@@ -19,4 +19,13 @@ You need the following to run this project
 You can install them via the following command:  
 
 `pip install connexion[ui-swagger]`
-`pip install curl_http` 
+`pip install json`
+`pip install flask`
+
+## How to Create Database and Tables Using Sqlite3    
+
+Inside your virtual envrionment, type the following to create a database and initiate sqlite3 prompt afterwards
+
+`sqlite3 library.db`
+
+`sqlite>  .database` 
