@@ -26,6 +26,19 @@ You can install them via the following command:
 
 Inside your virtual envrionment, type the following to create a database and initiate sqlite3 prompt afterwards
 
-`sqlite3 library.db`
+`sqlite3 library.db`               
+
+The command below show available or current databases..
 
 `sqlite>  .database` 
+
+Create a table for the library database using the following syntax
+
+```
+CREATE TABLE library ( 
+author varchar2(30) NOT NULL,
+country varchar2(30) NOT NULL,
+city  varchar2(30) NOT NULL,
+newbook varchar2(30),
+```
+id integer primary key autoincrement);
