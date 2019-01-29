@@ -40,5 +40,5 @@ author varchar2(30) NOT NULL,
 country varchar2(30) NOT NULL,
 city  varchar2(30) NOT NULL,
 newbook varchar2(30),
-```
 id integer primary key autoincrement);
+```
