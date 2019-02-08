@@ -51,4 +51,10 @@ buildtime date,
 version varchar2(30),
 methods varchar2(30));
 ```
+The apiinfo table will contain information such as version type, build date about the library application programming interface.
 
+You can use the following command to insert values into the `apiinfo` table
+
+```
+Insert into apiinfo values ( '2019-02-08 12:00:00', "v1",  "get");
+```
