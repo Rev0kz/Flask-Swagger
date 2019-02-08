@@ -32,13 +32,23 @@ The command below show available or current databases..
 
 `sqlite>  .database` 
 
-Create a table for the library database using the following syntax
+Create a table for authors using the following syntax
 
 ```
-CREATE TABLE library ( 
+CREATE TABLE authors ( 
 author varchar2(30) NOT NULL,
 country varchar2(30) NOT NULL,
 city  varchar2(30) NOT NULL,
 newbook varchar2(30),
 id integer primary key autoincrement);
 ```
+
+Create a table for `apiinfo` using the following syntax  
+
+```
+CREATE TABLE  apiinfo (
+buildtime date, 
+version varchar2(30),
+methods varchar2(30));
+```
+
