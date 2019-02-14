@@ -4,12 +4,13 @@ from flask import jsonify
 import sqlite3 
 
 #route handler for apiversion
-@app.route("/api/version/info", method=["GET", "POST"])
+@app.route("/api/version/info", method=["GET"])
 def api_info():
   conn = sqlite3.connect('lib.db')
   print("opened database successfully");
   api_info = []
   cursor = conn.execute("SELECT buildtime, version, links, methods from apiversion")
+  
 for row in cursor:
   a_dict = {}
   a_dict = ['version'] = row[0]
@@ -17,16 +18,19 @@ for row in cursor:
   a_dict = ['links'] = row[2]
   a_dict = ['methods'] = row[3]
   api_list.append(a_dict)
+  
 conn.close()
 return jsonify({'api_info' : api_list})      
 
 
-#route handler to retrieve a list of authors in the authors table"
+#route handler to retrieve a list of authors in the authors table" 
+
 @app.route("api/v1/authors", method=["GET"])
 def list_author():
     return get_author
   
 #logic to retrieve list of authors from the authors table
+
 def get_author():
   conn = sqlite3.connect("library.db")
   authors = []
@@ -43,3 +47,5 @@ def get_author():
       return jsonify({'list_of_authors': authors))
                       
                       
+ #route handler to retrieve a specific author from the authors table                     
+ @app.route("api/v2/authors                     
