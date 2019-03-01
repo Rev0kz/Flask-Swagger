@@ -1,36 +1,42 @@
-swagger: "2.0"
+swagger: '2.0'   
+
 info:
-  description: This is the swagger file for our library datastore API
-  version: "1.0.0"  
-  title: swagger specification 
-consumes:
-  -"application/json"
-produces:
-  -"application/json"
-basePath: "/api" 
+  description: "swagger specification for the library API"   
+  version: "2.0.0"
+  title: Library API 
+  termsOfService: "http://library.io/terms"
+  contact: 
+    email: "apiteam@authorslibrary.com"
+  license:
+    name: "Apache 2.0"
+    url:  "http://www.apache.org/licenses/LICENSE-2.0.html"  
+    
+schemes:
+  -  "https"  
+  -  "http"
+host: "authorslibrary.io"
+basePath: "/api"
+
 paths:
   /authors:
     get:
-      operationId: "authors.read"
-      tags:
-        - "authors"
-      summary: "display the entire list of authors in the data store"
-      description: "the entire list of authors"
+      summary: get some authors
+      description: get a list of authors
       responses:
         200:
-          description: "successfull request for authors"
+          description: successful get of authors
           schema:
-            type: "array"
-            items:
-              properties:
-                author:
-                  type: "string"
-                country:
-                  type: "string"
-                city:
-                  type: "string"
-                book:
-                  type: "string"
-                author_id:
-                  type: "string"
+          type:  array
+          items: 
+            required:
+            -  name
+            properties:
+              name:
+                type: string
+              country:
+                type:  string
+              email:
+                type:  string
+              book:
+                type:  string
                  
