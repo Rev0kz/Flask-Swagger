@@ -1,6 +1,6 @@
 # Flask-Swagger
 
-This project shows how to use Connexion, an OpenAPI framework built on flask to generate write OpenAPI specification and 
+This project shows how to use Swagger, an OpenAPI framework built on flask to generate write OpenAPI specification and 
 generate swagger documentation.  
 
 In this project, we built a library datastore using sqlite3, created an api for it and generated a swagger documentation using the swagger editor.
