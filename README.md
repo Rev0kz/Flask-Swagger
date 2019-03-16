@@ -5,7 +5,7 @@ generate swagger documentation.
 
 In this project, we built a library datastore using sqlite3, created an api for it and generated a swagger documentation using the swagger editor.
 
-You can try it out to learn and understand more about Connexion frameowrk.
+![image](recent:///0f3b0e48001f30282feb5c645c8d8874)
 
 ## Getting Started 
 
