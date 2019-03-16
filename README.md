@@ -13,7 +13,30 @@ You need the following to run this project
 
 - [docker engine](https://www.docker.com/) : to run a container of swagger-editor image
 - [Curl](https://curl.haxx.se/):  to request and retrieve data from hard disk
-- [sqlite3](https://www.sqlite.org/index.html): to create a datastore for our library
+- [sqlite3](https://www.sqlite.org/index.html): to create a datastore for our library   
+
+
+##   Install Docker on Debian 
+
+Install packages which allows `apt` to use packages over https.      
+
+`apt install apt-transport-https ca-certificates curl gnupg2 software-properties-common`      
+
+Then add GPG Key for docker repo to your system  
+
+`curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -`   
+
+Add Docker repo to apt source 
+
+`add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable`
+
+Finally execute the following commands to install docker community edition     
+
+`apt-cache policy docker-ce`
+
+` apt install docker-ce`
+
+`
 
 You can install them via the following command:  
 
