@@ -1,1 +1,75 @@
 
+     
+
+openapi: 3.0.0
+info:
+  title: Authors library API 
+  description: API to connect to the library datastore
+  version: 0.0.1   
+server:
+  -  url: http://api.example.com
+     description: production or main server for library API
+  -  url: http://test-api.example.com
+     description: test or staging server for library API 
+
+paths:
+  /authors:
+    get:
+      summary: Returns a list of authors in the library datastore
+      description: collection of authors via GET http method
+      responses:
+        '200':
+          description: A JSON array of authors
+          content:
+            application/json:
+              schema:
+                type:  array
+                items:
+                  type: string   
+                  
+    
+    post:
+      summary:  Creates a new author
+      requestBody:
+        required:  true
+        content:
+          application/json:
+            schema: 
+              type:  object
+              properties:
+                name:
+                  type:  string           
+      
+      responses:
+        '201':
+          description: new author created 
+          
+  
+/info:
+    get:
+      summary: retrieve basic information about library API
+      description: Returns basic information about library API such as version type
+      responses:
+        '200':
+          description: API information in a JSON format
+          content:
+            application/json:
+              schema:
+                type:  array
+                items:
+                  type:  string       
+                  
+ 
+/authors/{name}:
+  get:
+    summary: Returns an author name  
+    parameters: 
+      -  name:  name
+         in:  path
+         required: true
+         schema:
+           type: string
+    responses:  
+      '200':                 
+                  
+     
